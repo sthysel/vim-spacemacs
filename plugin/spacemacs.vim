@@ -69,18 +69,9 @@ nmap <LEADER>qq :qa<CR>
 nmap <LEADER>sp :Ag<SPACE>
 nmap <LEADER>tn :set number!<CR>
 
-
-" more leaders 
+" more leaders
 nnoremap <LEADER>w :w<CR>
 " Toggle show/hide invisible chars
 nnoremap <LEADER>i :set list!<cr>
 " Toggle line numbers
 nnoremap <LEADER>N :setlocal number!<cr>
-
-" grep/Ack/Ag for the word under cursor
-vnoremap <LEADER>a y:grep! "\b<c-r>"\b"<cr>:cw<cr>
-nnoremap <LEADER>a :grep! "\b<c-r><c-w>\b"
-nnoremap K *N:grep! "\b<c-r><c-w>\b"<cr>:cw<cr>
-
-
-
