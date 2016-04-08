@@ -1,4 +1,4 @@
-# spacemacs.vim #
+# spacemacs.vim
 
 Spacemacs keybindings and settings ported to Vim. 
 Also see the [plugins](#plugin-dependencies) which make Vim feel even more like Spacemacs.
@@ -30,7 +30,13 @@ let mapleader = " "
 # Plugin dependencies
 
 ```
-Plug 'kien/ctrlp.vim'
+" Unite
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/neoyank.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make'}
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/unite-outline'
+Plug 'Shougo/unite-session'
 Plug 'scrooloose/syntastic'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
@@ -40,13 +46,9 @@ Plug 'szw/vim-maximizer'
 "git layer
 Plug 'tpope/vim-fugitive'
 
-"javascript layer
-Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
-
 "version-control layer
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 ```
 
 # Notes
-Based on https://github.com/jimmay5469/vim-spacemacs
+Originally based on https://github.com/jimmay5469/vim-spacemacs
