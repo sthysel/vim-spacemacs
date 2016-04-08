@@ -45,6 +45,7 @@ nmap <LEADER>gs :Gstatus<CR>
 nmap <LEADER>gw :Gwrite<CR>
 nmap <LEADER>gp :Git push<CR>
 nmap <LEADER>gc :Gcommit<CR>
+nmap <LEADER>gt :GitGutterToggle<CR>
 
 " windows
 nmap <LEADER>w- :sp<CR>
@@ -67,3 +68,19 @@ nmap <LEADER>pt :call spacemacs#toggleExplorerAtRoot()<CR>
 nmap <LEADER>qq :qa<CR>
 nmap <LEADER>sp :Ag<SPACE>
 nmap <LEADER>tn :set number!<CR>
+
+
+" more leaders 
+nnoremap <LEADER>w :w<CR>
+" Toggle show/hide invisible chars
+nnoremap <LEADER>i :set list!<cr>
+" Toggle line numbers
+nnoremap <LEADER>N :setlocal number!<cr>
+
+" grep/Ack/Ag for the word under cursor
+vnoremap <LEADER>a y:grep! "\b<c-r>"\b"<cr>:cw<cr>
+nnoremap <LEADER>a :grep! "\b<c-r><c-w>\b"
+nnoremap K *N:grep! "\b<c-r><c-w>\b"<cr>:cw<cr>
+
+
+
