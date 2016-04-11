@@ -21,7 +21,8 @@ endfunction
 " }}}
 
 " files
-nmap <LEADER>ff :<C-u>Unite buffer history/yank file file_rec/async file_mru<cr>
+nmap <LEADER>fa :<C-u>Unite buffer history/yank file file_rec/async file_mru<cr>
+nmap <LEADER>ff :<C-u>Unite file file_rec/async file_mru<cr>
 nmap <LEADER>fr :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
 nmap <LEADER>fs :w<CR>
 nmap <LEADER>fS :wa<CR>
