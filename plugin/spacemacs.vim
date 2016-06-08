@@ -23,10 +23,8 @@ endfunction
 " help
 nnoremap <Leader>? :Unite output:nmap\ \<Leader\><CR>
 
-" avy
+" avy using easymotion
 nmap <Leader>y <Plug>(easymotion-bd-jk)
-
-
 
 " files
 nmap <LEADER>fa :<C-u>Unite buffer history/yank file file_rec/async file_mru<cr>
