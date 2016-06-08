@@ -104,6 +104,8 @@ nnoremap <Leader>qQ :qa!<CR>
 nnoremap <Leader>qs :xa<CR>
 nmap <LEADER>sp :Ag<SPACE>
 nmap <LEADER>tn :set number!<CR>
+" requires airblade/vim-gitgutter
+nmap <Leader>Td :GitGutterToggle<CR>
 
 " more leaders
 nnoremap <LEADER>w :w<CR>
