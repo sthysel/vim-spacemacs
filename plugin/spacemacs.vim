@@ -20,6 +20,14 @@ endfunction
 
 " }}}
 
+" help
+nnoremap <Leader>? :Unite output:nmap\ \<Leader\><CR>
+
+" avy
+nmap <Leader>y <Plug>(easymotion-bd-jk)
+
+
+
 " files
 nmap <LEADER>fa :<C-u>Unite buffer history/yank file file_rec/async file_mru<cr>
 nmap <LEADER>ff :<C-u>Unite file file_rec/async file_mru<cr>
@@ -62,11 +70,37 @@ nmap <LEADER>wv <C-W>v
 nmap <LEADER>wm :MaximizerToggle<CR>
 nmap <LEADER>ww <C-W><C-W>
 
+" reindent
+nnoremap <Leader>j= mzgg=G`z
+" clear search
+nnoremap <Leader>sc :noh<CR>
+
+" commenting
+nmap <Leader>;  <Plug>Commentary
+vmap <Leader>;  <Plug>Commentary
+omap <Leader>;  <Plug>Commentary
+nmap <Leader>;; <Plug>CommentaryLine
+
+" errors (with syntastic)
+function! ToggleErrors()
+    let old_last_winnr = winnr('$')
+    SyntasticToggleMode
+    " lclose
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        " Errors
+        SyntasticCheck
+    endif
+endfunction
+nnoremap <silent> <Leader>el :<C-u>call ToggleErrors()<CR>
+nnoremap <silent> <Leader>en :lnext<CR>
+nnoremap <silent> <Leader>ep :lprev<CR>
+
 nmap <LEADER><TAB> <C-^>
-nmap <LEADER>;; :Commentary<CR>
-vmap <LEADER>; :Commentary<CR>
 nmap <LEADER>pt :call spacemacs#toggleExplorerAtRoot()<CR>
-nmap <LEADER>qq :qa<CR>
+nnoremap <LEADER>qq :qa<CR>
+nnoremap <Leader>qQ :qa!<CR>
+nnoremap <Leader>qs :xa<CR>
 nmap <LEADER>sp :Ag<SPACE>
 nmap <LEADER>tn :set number!<CR>
 
