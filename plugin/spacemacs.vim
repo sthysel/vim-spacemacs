@@ -34,6 +34,9 @@ nmap <LEADER>fs :w<CR>
 nmap <LEADER>fS :wa<CR>
 nmap <LEADER>ft :NERDTreeToggle<CR>
 
+" undo tree (needs mbbill/undotree plugin)
+nnoremap <Leader>au :UndotreeToggle<CR>
+
 " rc
 nmap <LEADER>fed :e $MYVIMRC<CR> 
 nmap <LEADER>sv :source $MYVIMRC<CR>
