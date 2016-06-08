@@ -42,12 +42,21 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'szw/vim-maximizer'
+ 
+"easymotion
+Plugin 'easymotion/vim-easymotion'
+
+"undo tree
+Plugin 'mbbill/undotree'
 
 "git layer
 Plug 'tpope/vim-fugitive'
 
 "version-control layer
 Plug 'airblade/vim-gitgutter'
+
+"surround operations, optional
+Plugin 'tpope/vim-surround'
 ```
 
 # Notes
